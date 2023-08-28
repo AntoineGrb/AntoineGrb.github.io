@@ -8,8 +8,8 @@
     //Récupérer le fichier de données
     async function fetchData() {
         try {
-            const response = await fetch(`src/data/data-${pathName}.json`);
-            console.log(response)
+            const response = await fetch(`/Quizz-hub/src/data/data-${pathName}.json`);
+            console.log('reponse' , response)
             
             if (!response.ok) {
                 throw new Error("Erreur réseau ou fichier non trouvé");
