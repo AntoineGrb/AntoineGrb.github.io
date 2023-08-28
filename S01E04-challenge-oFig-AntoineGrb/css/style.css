@@ -1,0 +1,195 @@
+/* Variables */
+
+:root {
+    --main-color:#c80000;
+    --second-color:#666;
+    --third-color:#ccc;
+    --spacing:10px;
+}
+
+/*Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+/*Polices et textes*/
+
+h1 , h2 , p {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+h1 , h2 {
+    color:white;
+}
+
+.page__title > h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.page__title--small {
+    font-size: 0.9rem;
+}
+
+.page__subtitle > h2 {
+    font-size: 1.1rem;
+    font-weight:300;
+}
+
+.page__subtitle > h2 > em {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.item__legend > p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color:var(--third-color);
+    margin-top: calc(var(--spacing));
+}
+
+.item__name , .item__button-price {
+    font-weight: bold;
+}
+
+.item__name {
+    font-size: 1.6rem;
+}
+
+.item__button-price {
+    font-size: 1.2rem;
+}
+
+.item__button-card , .item__button-price {
+    color:white;
+}
+
+/*Header */
+
+header {
+    width: 100%;
+}
+
+.page__title {
+    background-color: var(--main-color);
+    margin: 0;
+    padding: calc(2*var(--spacing));
+}
+
+.page__subtitle {
+    background-color: var(--second-color);
+    padding: calc(var(--spacing));
+    text-align: center;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap:var(--spacing);
+    margin: 20px 100px;
+    justify-content: space-around;
+}
+
+.item {
+    width: 30%;
+    border:solid 1px var(--third-color);
+    padding:calc(var(--spacing));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.item__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--spacing) / 2);
+    object-fit: contain;
+}
+
+.item__img > img {
+    width: 100%;
+}
+
+.item__legend {
+    border-bottom: solid 1px var(--third-color);
+    padding-bottom: 2px;
+}
+
+.item__name , .item__description {
+    margin: 8px 0 15px;
+}
+
+.item__infos {
+    flex: 1;
+}
+
+.item__button {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--main-color);
+    padding: calc(1.5 * var(--spacing)) 0 calc(1.5 * var(--spacing));
+}
+
+.item__button-price--cross {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-decoration:line-through;
+
+}
+
+.item__promo { /* Gestion de la pastille */
+    width: 50px;
+    height: 50px;
+    background-color: var(--second-color);
+    border-radius:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:20px;
+    right:20px;
+    color:white;
+    font-weight: bold;
+    border:solid 2px var(--third-color);
+    box-shadow: 2px 2px 5px black;
+}
+
+.sales-banner {
+    position: fixed;
+    left:0;
+    top:50%;
+    background-color: var(--main-color);
+    height:100px;
+    width: 30px;
+    border-radius: 0 10px 10px 0;
+    color:white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* Footer */ 
+
+footer {
+    background-color: var(--second-color);
+    text-align: center;
+    color:white;
+    padding: calc(1.5 * var(--spacing));
+}
