@@ -8,7 +8,8 @@
     //Récupérer le fichier de données
     async function fetchData() {
         try {
-            const response = await fetch(`../src/data/data-${pathName}.json`);
+            const response = await fetch(`./src/data/data-${pathName}.json`);
+            console.log(response)
             
             if (!response.ok) {
                 throw new Error("Erreur réseau ou fichier non trouvé");
@@ -23,7 +24,7 @@
         }
     }
     
-    fetchData();
+    fetchData();    
 
     //Déployer le quizz sur le DOM
     function deployData(data) {
