@@ -8,7 +8,7 @@
     //Récupérer le fichier de données
     async function fetchData() {
         try {
-            const response = await fetch(`./src/data/data-${pathName}.json`);
+            const response = await fetch(`src/data/data-${pathName}.json`);
             console.log(response)
             
             if (!response.ok) {
